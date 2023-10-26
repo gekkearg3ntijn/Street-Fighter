@@ -14,7 +14,7 @@ pygame.display.set_caption("Brawler")
 
 #set framerate
 clock = pygame.time.Clock()
-FPS = 60
+FPS = 300
 
 #define colours
 RED = (255, 0, 0)
@@ -133,7 +133,7 @@ while run:
       score[0] += 1
       round_over = True
       round_over_time = pygame.time.get_ticks()
-  else:
+  else: 
     #display victory image
     screen.blit(victory_img, (460, 350))
     if pygame.time.get_ticks() - round_over_time > ROUND_OVER_COOLDOWN:
