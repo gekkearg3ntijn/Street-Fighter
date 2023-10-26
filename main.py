@@ -48,7 +48,7 @@ magic_fx = pygame.mixer.Sound("assets/audio/magic.wav")
 magic_fx.set_volume(0.75)
 
 #load background image
-bg_image = pygame.image.load("assets/images/background/scary.jpg").convert_alpha()
+bg_image = pygame.image.load("assets/images/background/minecraft dinges.png").convert_alpha()
 
 #load spritesheets
 warrior_sheet = pygame.image.load("assets/images/warrior/Sprites/warrior.png").convert_alpha()
