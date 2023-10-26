@@ -63,7 +63,7 @@ WIZARD_ANIMATION_STEPS = [8, 8, 1, 8, 8, 3, 7]
 
 #define font
 count_font = pygame.font.Font("assets/fonts/turok.ttf", 80)
-score_font = pygame.font.Font("assets/fonts/turok.ttf", 30)
+score_font = pygame.font.Font("assets/fonts/turok.ttf", 50)
 
 #function for drawing text
 def draw_text(text, font, text_col, x, y):
@@ -98,7 +98,7 @@ while run:
 
   #show player stats
   draw_health_bar(fighter_1.health, 20, 20)
-  draw_health_bar(fighter_2.health, 580, 20)
+  draw_health_bar(fighter_2.health, 750, 20)
   draw_text("P1 - Score: " + str(score[0]), score_font, RED, 20, 60)
   draw_text("P2 - Score: " + str(score[1]), score_font, RED, 750, 60)
 
