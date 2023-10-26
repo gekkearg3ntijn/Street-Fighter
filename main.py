@@ -6,8 +6,8 @@ mixer.init()
 pygame.init()
 
 #create game window
-SCREEN_WIDTH = 1000
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1200
+SCREEN_HEIGHT = 800
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Brawler")
@@ -30,12 +30,12 @@ ROUND_OVER_COOLDOWN = 2000
 
 #define fighter variables
 WARRIOR_SIZE = 162
-WARRIOR_SCALE = 4
-WARRIOR_OFFSET = [72, 56]
+WARRIOR_SCALE = 6
+WARRIOR_OFFSET = [90, 67]
 WARRIOR_DATA = [WARRIOR_SIZE, WARRIOR_SCALE, WARRIOR_OFFSET]
 WIZARD_SIZE = 250
-WIZARD_SCALE = 3
-WIZARD_OFFSET = [112, 107]
+WIZARD_SCALE = 5
+WIZARD_OFFSET = [60, 126]
 WIZARD_DATA = [WIZARD_SIZE, WIZARD_SCALE, WIZARD_OFFSET]
 
 #load music and sounds
@@ -100,7 +100,7 @@ while run:
   draw_health_bar(fighter_1.health, 20, 20)
   draw_health_bar(fighter_2.health, 580, 20)
   draw_text("P1 - Score: " + str(score[0]), score_font, RED, 20, 60)
-  draw_text("P2 - Score: " + str(score[1]), score_font, RED, 580, 60)
+  draw_text("P2 - Score: " + str(score[1]), score_font, RED, 750, 60)
 
   #update countdown
   if intro_count <= 0:
@@ -135,7 +135,7 @@ while run:
       round_over_time = pygame.time.get_ticks()
   else:
     #display victory image
-    screen.blit(victory_img, (360, 150))
+    screen.blit(victory_img, (460, 350))
     if pygame.time.get_ticks() - round_over_time > ROUND_OVER_COOLDOWN:
       round_over = False
       intro_count = 3
